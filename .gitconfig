@@ -5,7 +5,6 @@
   # List available aliases
   aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
   # Command shortcuts
-  ci = commit
   co = "!checkout_fzf() { git branch --sort=-committerdate | fzf | xargs git checkout; }; checkout_fzf"
   aaf = "!add_fzf() { git status -s | awk '{print $2}' | fzf -m | xargs git add; }; add_fzf"
   ## "add files and commit" add files with fzf and then immediately commit
