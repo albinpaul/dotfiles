@@ -12,6 +12,10 @@
   "files.trimTrailingWhitespace": false,
   "editor.semanticHighlighting.enabled": false,
   "java.checkstyle.autocheck": true,
+  "vim.inccommand": "replace",
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+
+  ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["p"],
@@ -20,7 +24,16 @@
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     { "before": [">"], "commands": ["editor.action.indentLines"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    {
+      "before": [
+        "g",
+        "C-a"
+      ],
+      "commands": [
+        "progressive.incrementBy1"
+      ]
+    }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -49,6 +62,15 @@
       "before": ["<leader>", "b"],
       "commands": ["bookmarks.listFromAllFiles"]
     },
+    {
+      "before": ["<leader>", "b", "n"],
+      "commands": ["bookmarks.jumpToNext"]
+    },
+    {
+      "before": ["<leader>", "b", "p"],
+      "commands": ["bookmarks.jumpToPrevious"]
+    },
+
 
     //PANES
     {
@@ -122,7 +144,7 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.windows": "zsh",
-  // "vim.smartRelativeLine": true,
+  "vim.smartRelativeLine": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "#a9dc7660",
   "vim.highlightedyank.duration": 250,
@@ -130,7 +152,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "telemetry.telemetryLevel": "off",
-  "viceroy.config.lastVersion": "0.52.201573",
+  "viceroy.config.lastVersion": "0.53.201782",
   "files.watcherExclude": {
     "**/build/**": true,
     "**/.git/objects/**": true,
@@ -138,6 +160,8 @@
     "**/node_modules/*/**": true,
     "**/.hg/store/**": true
   },
+
+  
   "files.exclude": {
     ".viceroy": true,
     "apollo-overrides": true,
@@ -166,7 +190,7 @@
     "workbench.editor.languageDetection": false
   },
   "viceroy.workspaceSyncStrategy": "automatic",
-  "viceroy.config.internal.lastUpdateTime": "2024-02-22T07:47:16.479Z",
+  "viceroy.config.internal.lastUpdateTime": "2024-11-19T12:10:28.086Z",
   "viceroy.marketplace.extensionUpdateChannels": {
     "marklel.vscode-brazil": "stable",
     "amzn.AWSGuruQLinter": "stable"
@@ -178,20 +202,31 @@
   },
   "viceroy.config.setUpCodeWhisperer": false,
   "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
   "window.commandCenter": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.wordWrapColumn": 79,
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
   "workbench.iconTheme": "material-icon-theme",
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "window.zoomLevel": 1,
-  "update.mode": "none"
+  "update.mode": "none",
+  "jest.jestCommandLine": "brazil-build test --",
+  "jest.runMode": "on-demand",
+  "editor.lineNumbers": "relative",
+  "window.zoomLevel": 3,
+  "git.confirmSync": false,
+  "viceroy.config.notifyGlibcIssue": false,
+  "viceroy.config.setup.amazonQ": false,
+  "python.defaultInterpreterPath": "/Users/asaju/utils/python-environment",
+  "java.checkstyle.configuration": "/home/asaju/brazil-pkg-cache/packages/CheckstyleAntBuildLogic/CheckstyleAntBuildLogic-1.10.279817.0/AL2_x86_64/DEV.STD.PTHREAD/build/antfiles/config/checkstyle-rules.xml",
+  "java.checkstyle.version": "6.0",
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
 }
