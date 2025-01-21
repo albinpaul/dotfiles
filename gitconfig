@@ -113,7 +113,7 @@
   # rebase = preserve
   # WARNING! This option, which is the latest variation, is only
   # available from 2.18 onwards.
-  rebase = merges
+  rebase = true
 [push]
   # Default push should only push the current branch to its push target, regardless of its remote name
   default = upstream
@@ -151,3 +151,8 @@
   prereleaseSuffix = .beta
   prereleaseSuffix = -rc
   prereleaseSuffix = .rc
+[rebase]
+  autostash = true
+[user]
+	name = asaju@amazon.com
+	email = Albin Saju
