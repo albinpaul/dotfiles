@@ -152,7 +152,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "telemetry.telemetryLevel": "off",
-  "viceroy.config.lastVersion": "0.53.201782",
+  "viceroy.config.lastVersion": "0.53.201822",
   "files.watcherExclude": {
     "**/build/**": true,
     "**/.git/objects/**": true,
@@ -190,7 +190,7 @@
     "workbench.editor.languageDetection": false
   },
   "viceroy.workspaceSyncStrategy": "automatic",
-  "viceroy.config.internal.lastUpdateTime": "2024-11-19T12:10:28.086Z",
+  "viceroy.config.internal.lastUpdateTime": "2025-01-16T07:37:25.360Z",
   "viceroy.marketplace.extensionUpdateChannels": {
     "marklel.vscode-brazil": "stable",
     "amzn.AWSGuruQLinter": "stable"
@@ -229,4 +229,6 @@
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
 }
