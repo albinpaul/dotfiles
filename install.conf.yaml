@@ -6,11 +6,11 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
-    ~/.tmux: tmux
+    # ~/.tmux: tmux
     ~/.gitconfig: gitconfig
 
 - create:
-    - ~/downloads
+    # - ~/downloads
     - ~/.vim/undo-history
 
 - shell:
