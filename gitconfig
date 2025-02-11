@@ -6,6 +6,7 @@
   aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
   # Command shortcuts
   co = "!checkout_fzf() { git branch --sort=-committerdate | fzf | xargs git checkout; }; checkout_fzf"
+  fd = "!fd() {preview=\"git diff $@ --color=always -- {-1}\" git diff $@ --name-only | fzf -m --ansi --preview $preview}; fd"
   aaf = "!add_fzf() { git status -s | awk '{print $2}' | fzf -m | xargs git add; }; add_fzf"
   ## "add files and commit" add files with fzf and then immediately commit
   gsl = "!git stash list --pretty=\"format:%<(11)%C(yellow)%gd %Cgreen%ci %C(blue)%s\" | fzf -0 --ansi --header 'ID          Date                      Message' --preview 'git stash show -p {1}' --preview-window up,wrap,80% --preview-label='[ Git Stashes ]' --preview-label-pos=3 --bind 'enter:execute(git stash show {1};read -p \"Press any key to resume\"),alt-d:reload(git stash drop {1};git stash list --pretty=\"format:%<(11)%C(yellow)%gd %Cgreen%ci %C(blue)%s\"),alt-p:reload(git stash pop {1};git stash list --pretty=\"format:%<(11)%C(yellow)%gd %Cgreen%ci %C(blue)%s\")'"
