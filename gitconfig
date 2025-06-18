@@ -117,6 +117,7 @@
   # WARNING! This option, which is the latest variation, is only
   # available from 2.18 onwards.
   rebase = true
+  autostash = true
 [push]
   # Default push should only push the current branch to its push target, regardless of its remote name
   default = upstream
@@ -156,6 +157,13 @@
   prereleaseSuffix = .rc
 [rebase]
   autostash = true
+[color]
+        ui = auto
 [user]
-	name = asaju@amazon.com
-	email = Albin Saju
+        name = Albin Saju
+        email = albin.saju@nutanix.com
+[core]
+        editor = vim
+[checkout]
+    autostash = true
+
